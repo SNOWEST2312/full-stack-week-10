@@ -1395,48 +1395,16 @@ exports.export = function(dest, destName, get) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _petTypesJs = require("./PetTypes.js");
-var _petTypesJsDefault = parcelHelpers.interopDefault(_petTypesJs);
 var _petInfoJs = require("./PetInfo.js");
 var _petInfoJsDefault = parcelHelpers.interopDefault(_petInfoJs);
+var _petTypesJs = require("./PetTypes.js");
+var _petTypesJsDefault = parcelHelpers.interopDefault(_petTypesJs);
 // CHALLENGE: create the two above components and have each render a h2 tag with some text
 var _react = require("react");
 const PetApp = (props)=>{
     // lifted from PetTypes
     const [chosenPet, setChosenPet] = (0, _react.useState)('dog');
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Pet Info App"
-            }, void 0, false, {
-                fileName: "src/components/PetApp.js",
-                lineNumber: 12,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _petTypesJsDefault.default), {
-                chosenPet: chosenPet,
-                setChosenPet: setChosenPet
-            }, void 0, false, {
-                fileName: "src/components/PetApp.js",
-                lineNumber: 13,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _petInfoJsDefault.default), {}, void 0, false, {
-                fileName: "src/components/PetApp.js",
-                lineNumber: 14,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-exports.default = PetApp;
-
-},{"react/jsx-dev-runtime":"bw2z9","./PetTypes.js":"43FYL","./PetInfo.js":"3I6G5","react":"i6QAX","@parcel/transformer-js/src/esmodule-helpers.js":"diDGB"}],"43FYL":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-const PetTypes = (props)=>{
+    // We lifted this status  out of PetTypes.js because both PetTypes component and PetInfo need it
     const [petTypes, setPetTypes] = (0, _react.useState)([
         {
             name: 'dog',
@@ -1451,6 +1419,40 @@ const PetTypes = (props)=>{
             description: 'requires a special cage and can learn to talk'
         }
     ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Pet Info App"
+            }, void 0, false, {
+                fileName: "src/components/PetApp.js",
+                lineNumber: 30,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _petTypesJsDefault.default), {
+                chosenPet: chosenPet,
+                setChosenPet: setChosenPet
+            }, void 0, false, {
+                fileName: "src/components/PetApp.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _petInfoJsDefault.default), {
+                chosenPet: chosenPet
+            }, void 0, false, {
+                fileName: "src/components/PetApp.js",
+                lineNumber: 32,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+exports.default = PetApp;
+
+},{"react/jsx-dev-runtime":"bw2z9","./PetTypes.js":"43FYL","./PetInfo.js":"3I6G5","react":"i6QAX","@parcel/transformer-js/src/esmodule-helpers.js":"diDGB"}],"43FYL":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const PetTypes = (props)=>{
     // Need a state to keep track of which pet was chosen by the user.
     // CHALLENGE: when the user clicks a list item, the chosenPet state should be updated to the pet they clicked on. AND the chosen pet should be displayed in the h2
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -1462,8 +1464,8 @@ const PetTypes = (props)=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/PetTypes.js",
-                lineNumber: 23,
-                columnNumber: 9
+                lineNumber: 7,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                 children: petTypes.map((pet)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -1471,33 +1473,50 @@ const PetTypes = (props)=>{
                         children: pet.name
                     }, pet.name, false, {
                         fileName: "src/components/PetTypes.js",
-                        lineNumber: 26,
-                        columnNumber: 32
+                        lineNumber: 11,
+                        columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/PetTypes.js",
-                lineNumber: 24,
-                columnNumber: 9
+                lineNumber: 8,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
 exports.default = PetTypes;
 
-},{"react/jsx-dev-runtime":"bw2z9","react":"i6QAX","@parcel/transformer-js/src/esmodule-helpers.js":"diDGB"}],"3I6G5":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"bw2z9","@parcel/transformer-js/src/esmodule-helpers.js":"diDGB"}],"3I6G5":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const PetInfo = (props)=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-            children: "Pet Info"
-        }, void 0, false, {
-            fileName: "src/components/PetInfo.js",
-            lineNumber: 2,
-            columnNumber: 14
-        }, undefined)
-    }, void 0, false);
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: [
+                    "Pet Info:",
+                    props.chosenPet
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PetInfo.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Description of the chosen pet type:"
+            }, void 0, false, {
+                fileName: "src/components/PetInfo.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {}, void 0, false, {
+                fileName: "src/components/PetInfo.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
 };
 exports.default = PetInfo;
 
