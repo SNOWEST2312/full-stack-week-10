@@ -12,7 +12,7 @@
       "onAutoForward": "openBrowser"
     }
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y sqlite3",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y sqlite3 && npm ci",
   "customizations": {
     "vscode": {
       "extensions": [
