@@ -1,1 +1,1 @@
-{"mappings":"ACAA,iBAIA","sources":["index.css","src/style.css"],"sourcesContent":["h1 {\n  color: #6a5acd;\n}\n\n.subtitle {\n  color: brown;\n}\n/*# sourceMappingURL=index.css.map */\n","h1 {\n    color: slateblue;\n}\n\n.subtitle {\n    color: brown;\n}"],"names":[],"version":3,"file":"index.css.map"}
+{"mappings":"AAAA;;;;AAIA","sources":["src/style.css"],"sourcesContent":["h1 {\n    color: slateblue;\n}\n\n.subtitle {\n    color: brown;\n}"],"names":[],"version":3,"file":"index.css.map","sourceRoot":"../../react/"}
